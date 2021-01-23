@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+
+    rest-service:
+        env_file: .env
+        container_name: rest-service
+        build: .
+        command: python3 manage.py runserver 0.0.0.0:8000
+        volumes:
+          - .:/mopokemon
+        ports:
+          - "8000:8000"
+          - "5678:5678"
+    

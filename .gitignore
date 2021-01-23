@@ -1,0 +1,5 @@
+__pychache__
+*.pyc
+# The environment is included to facilitate the run of the project, but in any real world application must be excluded
+!.env
+db.sqlite3
