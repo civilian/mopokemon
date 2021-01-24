@@ -1,6 +1,6 @@
-# Oscar Chamat | useit test project
+# Oscar Chamat | mopokemon project
 
-This repository contains my Test Project whit the [pokeapi](https://pokeapi.co/), thank you for taking the time to read this documentation.
+This repository contains my Test Project with the [pokeapi](https://pokeapi.co/), thank you for taking the time to read this documentation.
 If you want me to implement some new feature, fix something or give any further detail don't hesitate on reaching me at chamatoscar@gmail.com.
 
 ## Installation
