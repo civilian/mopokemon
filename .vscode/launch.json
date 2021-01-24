@@ -12,6 +12,21 @@
         "host": "localhost",
         "port": 5678
       }
-    }
+    },
+    {
+      "name": "Django: debug",
+      "type": "python",
+      "request": "attach",
+      "connect": {
+          "host": "localhost",
+          "port": 3000
+      },
+      "pathMappings": [
+          {
+              "localRoot": "${workspaceFolder}",
+              "remoteRoot": "."
+          }
+      ]
+  }
   ]
 }

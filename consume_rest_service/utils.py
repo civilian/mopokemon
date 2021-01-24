@@ -3,12 +3,13 @@ from urllib.parse import urlencode
 import json
 from pprint import pprint
 
-def url_query(url, query_params):
-    query_string = urlencode(query_params)
-    url = f"{url}?{query_string}"
-    return url
+""" Mini library to deal with http requests.
+"""
 
 def get_json_from_url(url, my_data={}):
+    """ Gets the json response of getting the url
+
+    """
     my_data = bytes(json.dumps(my_data), encoding="utf-8")
     my_headers = { "Content-Type" : "application/json" }
     with requests.request(method="get", url=url, data=my_data, headers=my_headers) as response:
@@ -17,12 +18,14 @@ def get_json_from_url(url, my_data={}):
 def post_url(url, my_data):
     my_data = bytes(json.dumps(my_data), encoding="utf-8")
     my_headers = { "Content-Type" : "application/json" }
-    print(url)
     with requests.request(method="post", url=url, data=my_data, headers=my_headers) as response:
-        print(response.content)
-    return response
+        return response
 
 def return_dictionary_from_args(*args, **kwargs):
+    """Returns a dictionary with all the parameters
+    Returns:
+        dict
+    """
     dict_ = {
         **kwargs
     }

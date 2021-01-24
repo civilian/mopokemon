@@ -29,15 +29,17 @@
     - Being able to use the IDE of your choice in the host Operating System.
 
 ## Choosed names
-- mo-pokemon is choosed as a project name to slighly protect the anonimity of the project and that it's not easily copied.
+- mopokemon is choosed as a project name to slighly protect the anonimity of the project and that it's not easily copied.
 
 ## Documentation
 - The style is choosen from pep 257 https://www.python.org/dev/peps/pep-0257#multi-line-docstrings
 
 ## Design decisions
-- https://pokemondb.net/pokebase/270377/what-pokemon-has-the-longest-name longest name
+- https://pokemondb.net/pokebase/270377/what-pokemon-has-the-longest-name longest name for models.Pokemon.name data type
 
-- SaveChainEvolution does not need to be a Object but it looks cleaner and in my opinion "More extensible" for modification (https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle)
+- SaveChainEvolution (from pokemon.management.command._private_save_evolution_chain) does not need to be a Object but it looks cleaner and in my opinion "More extensible" for modification (https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle)
+
+- PokemonRetrieveViewSet(from pokemon.api.views) is implemented as a viewset because it shows a greater knowledge of Django Rest Framework, a simple ApiView could sufice but it's always better to write less code and to rely on code that has been tested more.
 
 ## Debug
 You need to run Visual Studio Code with the remote extension (https://code.visualstudio.com/docs/remote/remote-overview) in the mopokemon_rest-service container, in the /mopokemon directory. Make sure you have put your breakpoints (https://code.visualstudio.com/docs/editor/debugging). Then run inside the container the command:
