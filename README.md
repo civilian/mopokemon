@@ -29,7 +29,7 @@ This is what you need to install in your computer
 1) To run the rest service just do -> `docker-compose up`
 
 #### Testing the api rest
-1) Make sure you have curl installed and then -> `curl http://localhost:8000/api/v1/pokemon/ivysaur`
+1) Make sure you have curl installed in the host machine and then -> `curl http://localhost:8000/api/v1/pokemon/ivysaur`
 
 2) If you want to test in a more visual manner here is the url to the project in postman -> https://documenter.getpostman.com/view/7547562/TW6tMAnE
     - You can also see some examples of the urls.
