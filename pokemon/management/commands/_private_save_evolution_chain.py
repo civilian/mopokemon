@@ -1,6 +1,6 @@
 from pprint import pprint
 from pokemon.models import VisitedEvolutionChains, Pokemon, Species
-from consume_rest_service.utils import url_query, get_json_from_url, return_dictionary_from_args
+from consume_rest_service.utils import get_json_from_url, return_dictionary_from_args
 
 class SaveChainEvolution(object):
 
@@ -53,6 +53,7 @@ class SaveChainEvolution(object):
         for json_stat in pokemon_json_data['stats']:
             setattr(pokemon, json_stat['stat']['name'].replace('-', '_'), json_stat['base_stat'])
         pokemon.save()
+        print(f"{pokemon} saved")
 
 
     def _save_species_data(self, url_species, pre_evolution_species=None):

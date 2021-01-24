@@ -1,5 +1,5 @@
-requests==2.25.1
-django==3.0
 debugpy==1.2.1
-ptvsd==4.3.2
+django==3.0
 djangorestframework
+ptvsd==4.3.2
+requests==2.25.1
