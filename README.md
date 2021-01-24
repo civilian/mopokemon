@@ -37,12 +37,12 @@ This is what you need to install in your computer
 I implemented the test project as a Django application and using Django Rest Framework for the API Rest.
 
 ### Implemented Features
-* Docker machine with a up to date installation
-* Docker compose to make easier the user of Docker
-* Design of the Database for eficiency and simple access to data
-* Django command with extra possible arguments in the case of something failing
-* Used ViewSets (Equivalent to Class Based Views) for the API View
-* Details; documentation, private variables and methods, custom error messages and providing tool to reduce the complexity of testing..
+* Docker machine with a up to date installation.
+* Docker compose to make easier the user of Docker.
+* Design of the Database for eficiency and simple access to data.
+* Django command with extra possible arguments in the case of something failing.
+* Used ViewSets (Equivalent to Class Based Views) for the API View.
+* Details; documentation, private variables and methods, custom error messages and providing tool to reduce the complexity of testing.
 
 ## Design
 
