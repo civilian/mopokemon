@@ -37,5 +37,11 @@
 ## Design decisions
 - https://pokemondb.net/pokebase/270377/what-pokemon-has-the-longest-name longest name
 
+- SaveChainEvolution does not need to be a Object but it looks cleaner and in my opinion "More extensible" for modification (https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle)
+
 ## Debug
-python -m debugpy --wait-for-client --listen 0.0.0.0:5678 ./manage.py save_evolution_chain_data --force --traceback 1
+You need to run Visual Studio Code with the remote extension (https://code.visualstudio.com/docs/remote/remote-overview) in the mopokemon_rest-service container, in the /mopokemon directory. Make sure you have put your breakpoints (https://code.visualstudio.com/docs/editor/debugging). Then run inside the container the command:
+
+    $ python -m debugpy --wait-for-client --listen 0.0.0.0:5678 ./manage.py save_evolution_chain_data --force --traceback 1
+
+And start the debugger from the menu that Visual Studio Code provides.

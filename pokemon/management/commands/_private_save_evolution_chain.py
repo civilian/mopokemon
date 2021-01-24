@@ -9,11 +9,22 @@ class SaveChainEvolution(object):
     }
 
     def __init__(self, force=False):
+        """Initiates the SaveChainEvolution method
+        Args:
+            force boolean: are you forcing the Chain to be saved?
+        Returns:
+            SaveChainEvolution object
+        """
         self._force = force
     
     def _continue_saving(self, created):
-        """ Method to reduce the complexity of the conditionals
+        """ Method to reduce the complexity of the conditionals, returns true if we can keep saving the data of this evolution chain
+        Args:
+            created boolean: if the VisitedEvolutionChains is new or not
+        Returns:
+            boolean
         """
+        # If you are forcing this evolution chain to be saved
         if self._force:
             return True
         if created:
@@ -22,6 +33,13 @@ class SaveChainEvolution(object):
         return False
 
     def _save_pokemon_data(self, url_pokemon, species):
+        """ Saves the data of one pokemons
+        Args:
+            url_pokemon str: url of pokeapi regarding a pokemon
+            species object models.Species: the species of this pokemon
+        Returns:
+            void
+        """
         pokemon_json_data = get_json_from_url(url=url_pokemon)
         pokemon = Pokemon()
         try:
@@ -38,7 +56,14 @@ class SaveChainEvolution(object):
 
 
     def _save_species_data(self, url_species, pre_evolution_species=None):
-        """ Saves the data of the pokemons in one species"""
+        """ Saves the data of the pokemons in one species
+        Args:
+            url_species str: url of pokeapi regarding an species
+            pre_evolution_species object models.Species: the species of the preevoution of the species we are saving
+        Returns:
+            void
+        """
+        
         species_json_data = get_json_from_url(url=url_species)
         species, created = Species.objects.get_or_create(name=species_json_data['name'], evolves_from=pre_evolution_species)
         for variety in species_json_data['varieties']:
@@ -49,7 +74,8 @@ class SaveChainEvolution(object):
     def _save_all_evolutions(self, evolves_to, pre_evolution_species=None):
         """ Recursively visits the evolutions saving his principal species and then iterating the new evolutions keeping the parent species
         Args: 
-            evolves_to list(json(...)): list that contains a main species
+            evolves_to list(json(...)): list that contains a main species and recursively a list with his same structure(comes from the api)
+            pre_evolution_species object models.Species: the species of the preevoution of the species we are saving
         Returns:
             void
         """
