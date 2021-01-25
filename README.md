@@ -30,10 +30,11 @@ This is what you need to install in your computer
 
 #### Testing the api rest
 * The database is added to the repository (db.sqlite3) for fast testing, the command has been run with CHAIN_ID=1 and CHAIN_ID=2 so charmander/bulbasaur and their evolutions have been added.
-1) Make sure you have curl installed in the host machine and then -> `curl http://localhost:8000/api/v1/pokemon/ivysaur`
+1) Make sure you have curl installed in the host machine and then run -> `curl http://localhost:8000/api/v1/pokemon/ivysaur`
 
 2) If you want to test in a more visual manner here is the url to the project in postman -> https://documenter.getpostman.com/view/7547562/TW6tMAnE
     - You can also see some examples of the urls.
+
 ## Implementation
 I implemented the test project as a Django application and using Django Rest Framework for the API Rest.
 
