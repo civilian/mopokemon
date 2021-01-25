@@ -6,7 +6,7 @@
 1) To run the command just do -> `docker-compose exec rest-service python manage.py save_evolution_chain_data --force --traceback 1`
 2) In general the command can be run with -> `docker-compose exec rest-service python manage.py save_evolution_chain_data CHAIN_ID`
     - Where CHAIN_ID is an integer that identifies an evolution chain.
-3) If you want to see the manual of the command use -> `docker-compose exec rest-service python manage.py save_evolution_chain_data`
+3) If you want to see the manual of the command use -> `docker-compose run rest-service python manage.py save_evolution_chain_data`
 
 
 ## Testing the api rest
