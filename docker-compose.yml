@@ -8,7 +8,7 @@ services:
         build: .
         # Migrating the database in the command where the server is runned is dangerous but
         # in this case simplifies execution
-        command: python3 manage.py runserver 0.0.0.0:8000
+        command: bash -c "python3 manage.py migrate && python3 manage.py runserver 0.0.0.0:8000"
         volumes:
           - .:/mopokemon
         ports:
