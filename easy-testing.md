@@ -1,6 +1,7 @@
-## staring the service
-
-1) First try to do -> `docker-compose up -d`
+## Staring the service
+1) First connect to the server with the instructions in the email.
+2) Then `cd mopokemon`
+3) Then try to do -> `docker-compose up -d`
 
 ## Testing the command
 1) To run the command just do -> `docker-compose exec rest-service python manage.py save_evolution_chain_data --force --traceback 1`
