@@ -1,5 +1,7 @@
 FROM ubuntu:18.04 as base
 
+USER root
+
 RUN apt-get update
 
 RUN apt-get -y install software-properties-common
