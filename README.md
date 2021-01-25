@@ -3,6 +3,11 @@
 This repository contains my Test Project with the [pokeapi](https://pokeapi.co/), thank you for taking the time to read this documentation.
 If you want me to implement some new feature, fix something or give any further detail don't hesitate on reaching me at chamatoscar@gmail.com.
 
+
+## Easy testing
+
+The easiest way to test is to connect to the server provided in the email and follow [easy-testing.md](easy-testing.md)
+
 ## Installation
 Assuming you have the repository cloned already
 
@@ -17,13 +22,10 @@ This is what you need to install in your computer
   — Install curl
 
 ### Testing the command
-1) To run the rest service just do -> `docker-compose run rest-service bash`
-
-#### Running command
-1) Once inside the console of the container you can run the command -> `./manage.py save_evolution_chain_data --force --traceback 1`
-2) In general the command can be run with -> `./manage.py save_evolution_chain_data CHAIN_ID`
+1) To run the command just do -> `docker-compose run rest-service python manage.py save_evolution_chain_data --force --traceback 1`
+2) In general the command can be run with -> `docker-compose run rest-service python manage.py save_evolution_chain_data CHAIN_ID`
     - Where CHAIN_ID is an integer that identifies an evolution chain.
-3) If you want to see the manual of the command use -> `./manage.py save_evolution_chain_data`
+3) If you want to see the manual of the command use -> `docker-compose run rest-service python manage.py save_evolution_chain_data`
 
 ### Testing the api-rest
 1) To run the rest service just do -> `docker-compose up`
