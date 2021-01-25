@@ -27,6 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'ec2-34-229-95-181.compute-1.amazonaws.com',
+    'localhost',
+    '127.0.0.1',
+    '0.0.0.0',
 ]
 
 
@@ -79,12 +82,26 @@ WSGI_APPLICATION = 'mopokemon.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+if os.getenv("POSTGRES_DB") is not None:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': os.environ.get('POSTGRES_DB'),
+            'USER': os.environ.get('POSTGRES_USER'),
+            'PORT': os.environ.get('DB_PORT'),
+            'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
+            'HOST': os.environ.get('DB_HOST'),
+        },
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+
+
 
 
 # Password validation

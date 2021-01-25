@@ -2,4 +2,6 @@ debugpy==1.2.1
 django==3.0
 djangorestframework
 ptvsd==4.3.2
+psycopg2-binary==2.8.6
+#psycopg2==2.8.6 Augments the complexity needing to install postgres related packages
 requests==2.25.1

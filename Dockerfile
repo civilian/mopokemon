@@ -1,6 +1,8 @@
 FROM ubuntu:18.04 as base
 
-USER root
+# When dealing with really hard bugs PYTHONUNBUFFERED allows you not to buffer stdin and stdout so it gives more realible logs to know the order of execution
+# The debugger does not work if this environment variable is not set
+ENV PYTHONUNBUFFERED=1
 
 RUN apt-get update
 

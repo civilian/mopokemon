@@ -20,6 +20,10 @@ This is what you need to install in your computer
 * `cURL` https://develop.zendesk.com/hc/en-us/articles/360001068567-Installing-and-using-cURL#install
   — Install curl
 
+### Putting enviroment file .env
+
+Some configurations are dependant of the .env file. Then rename [.env.bk](.env.bk) to .env and if you want put the data of your bd.
+
 ### Testing the command
 1) To run the command just do -> `docker-compose run rest-service python manage.py save_evolution_chain_data --force --traceback 1`
 2) In general the command can be run with -> `docker-compose run rest-service python manage.py save_evolution_chain_data CHAIN_ID`
@@ -45,6 +49,7 @@ I implemented the test project as a Django application and using Django Rest Fra
 * Design of the Database for eficiency and simple access to data.
 * Django command with extra possible arguments in the case of something failing.
 * Used ViewSets (Equivalent to Class Based Views) for the API View.
+* An instalation in AWS is created, configuring the ports, the RDS (database), billing alarms, proper users for the database for easy testing.
 * Details; documentation, private variables and methods, custom error messages and providing tool to reduce the complexity of testing.
 
 ## Design
