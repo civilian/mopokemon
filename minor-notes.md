@@ -1,3 +1,6 @@
+## To implement
+- Protect the api with nginx.
+
 ## Comment structure
 - Comments that are obvious after the first read of the code should not be kept in the code augmenting the cognetive load and the time spent reading the code of the developers.
     They can be kept in this file.
