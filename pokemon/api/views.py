@@ -16,7 +16,7 @@ class PokemonRetrieveViewSet(mixins.RetrieveModelMixin,
         """"Custom handler of NOT-FOUND exception to properly inform the user"""
         if isinstance(exc, Http404):
             return Response({'detail': 'That pokemon name is not found, '
-                            'maybe you need to run the command [$./manage.py save_evolution_chain_data CHAIN_ID] '
+                            'maybe you need to run the command [$ docker-compose exec rest-service python manage.py save_evolution_chain_data CHAIN_ID] '
                             'with another evolution chain'}, 
                             status=status.HTTP_404_NOT_FOUND)
 

@@ -3,7 +3,6 @@
 This repository contains my Test Project with the [pokeapi](https://pokeapi.co/), thank you for taking the time to read this documentation.
 If you want me to implement some new feature, fix something or give any further detail don't hesitate on reaching me at chamatoscar@gmail.com.
 
-
 ## Easy testing
 
 The easiest way to test is to connect to the server provided in the email and follow [easy-testing.md](easy-testing.md)
