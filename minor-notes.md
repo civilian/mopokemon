@@ -21,7 +21,7 @@
     `RUN apt-get -y install python3.8`
 
 -  The directory of the project it's defined as the default directory of vagrant; from the source (/) so;
-        `(ENV DJANGO_DIR=/mo-pokemon)`
+        `(ENV BASE_DIR=/mopokemon)`
     - Even if the Operating System changes the structure of the project is kept.
     - Also is not directed to home(~) to make paths shorter and not dependant on a particular user
 
