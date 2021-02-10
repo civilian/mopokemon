@@ -16,3 +16,6 @@
 
 2) If you want to test in a more visual manner here is the url to the project in postman -> https://documenter.getpostman.com/view/7547562/TW6tMAnE
     - You can also see some examples of the urls.
+
+### Running the integration tests
+* Run: `docker-compose run rest-service python manage.py test`

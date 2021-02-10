@@ -40,6 +40,9 @@ Some configurations are dependant of the .env file. Then rename [.env.bk](.env.b
 2) If you want to test in a more visual manner here is the url to the project in postman -> https://documenter.getpostman.com/view/7547562/TW6tMAnE
     - You can also see some examples of the urls.
 
+### Running the integration tests
+* Run: `docker-compose run rest-service python manage.py test`
+
 ## Implementation
 I implemented the test project as a Django application and using Django Rest Framework for the API Rest.
 
@@ -51,6 +54,7 @@ I implemented the test project as a Django application and using Django Rest Fra
 * Used ViewSets (Equivalent to Class Based Views) for the API View.
 * An instalation in AWS is created, configuring the ports, the RDS (database), billing alarms, proper users for the database for easy testing.
 * Details; documentation, private variables and methods, custom error messages and providing tool to reduce the complexity of testing.
+* Integration tests.
 
 ## Design
 
