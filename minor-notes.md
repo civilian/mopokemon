@@ -57,3 +57,6 @@ And start the debugger from the menu that Visual Studio Code provides.
 Each time the django server starts it uses ptvsd to allow Visual Studio Code debug to attach and start to debug, so when you run:
     `$ docker-compose up`
 You can go to the debugging menu pick "Django: debug" and start debugging.
+
+## Testing
+* Only public methods are tested (https://anthonysciamanna.com/2016/02/14/should-private-methods-be-tested.html)
